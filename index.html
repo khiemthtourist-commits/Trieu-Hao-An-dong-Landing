@@ -328,7 +328,7 @@ section{scroll-margin-top:92px}
 .tour-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
 .tour-card.is-hidden{display:none}
 
-.card-media{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--paper-3)}
+.card-media{display:block;position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--paper-3)}
 .card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .tour-card:hover .card-media img{transform:scale(1.06)}
 .card-media::after{
@@ -358,6 +358,8 @@ section{scroll-margin-top:92px}
   font-family:var(--font-display);font-size:20.5px;font-weight:700;letter-spacing:-.01em;
   color:var(--navy-900);line-height:1.24;
 }
+.card-title a{transition:color .2s var(--ease)}
+.tour-card:hover .card-title a{color:var(--amber-600)}
 .card-meta{
   display:flex;flex-wrap:wrap;gap:8px 14px;
   font-size:13.5px;color:var(--ink-soft);font-weight:500;
@@ -937,14 +939,14 @@ section{scroll-margin-top:92px}
     <div class="tour-grid" id="tourGrid">
 
       <article class="tour-card reveal" data-region="chau-au" data-days="11" data-price="80900000">
-        <div class="card-media">
+        <a class="card-media" href="tour/eu-duc-ao-y-thuy-sy-phap.html">
           <img src="assets/tours/eu-duc-ao-y-thuy-sy-phap.webp" alt="Châu Âu: Đức – Áo – Ý – Thụy Sỹ – Pháp" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-hot">Bán chạy</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>CH250826VN11</i></span>
-          <h3 class="card-title">Châu Âu: Đức – Áo – Ý – Thụy Sỹ – Pháp</h3>
+          <h3 class="card-title"><a href="tour/eu-duc-ao-y-thuy-sy-phap.html">Châu Âu: Đức – Áo – Ý – Thụy Sỹ – Pháp</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11 Ngày 10 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Vietnam Airlines</span>
@@ -952,20 +954,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>80.900.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/eu-duc-ao-y-thuy-sy-phap.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d1" data-region="chau-au" data-days="9" data-price="73900000">
-        <div class="card-media">
+        <a class="card-media" href="tour/nga-moscow-stpetersburg.html">
           <img src="assets/tours/nga-moscow-stpetersburg.webp" alt="Nga: Moscow – Saint Petersburg" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-hot">Bán chạy</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>NG260826VN</i></span>
-          <h3 class="card-title">Nga: Moscow – Saint Petersburg</h3>
+          <h3 class="card-title"><a href="tour/nga-moscow-stpetersburg.html">Nga: Moscow – Saint Petersburg</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9 Ngày 8 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Vietnam Airlines</span>
@@ -973,20 +975,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>73.900.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/nga-moscow-stpetersburg.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d2" data-region="chau-au" data-days="8" data-price="65900000">
-        <div class="card-media">
+        <a class="card-media" href="tour/nga-stpetersburg-moscow.html">
           <img src="assets/tours/nga-stpetersburg-moscow.webp" alt="Nga: St. Petersburg – Moscow" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag">Còn nhận khách</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>NG191026TK</i></span>
-          <h3 class="card-title">Nga: St. Petersburg – Moscow</h3>
+          <h3 class="card-title"><a href="tour/nga-stpetersburg-moscow.html">Nga: St. Petersburg – Moscow</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>8 Ngày 7 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Turkish Airlines</span>
@@ -994,20 +996,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>65.900.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/nga-stpetersburg-moscow.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal" data-region="chau-au" data-days="11" data-price="77900000">
-        <div class="card-media">
+        <a class="card-media" href="tour/eu-phap-thuysy-y-vatican.html">
           <img src="assets/tours/eu-phap-thuysy-y-vatican.webp" alt="Châu Âu: Pháp – Thụy Sỹ – Ý – San Marino – Vatican" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-new">Tuyến kinh điển</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Lịch khởi hành <i>liên hệ</i></span>
-          <h3 class="card-title">Châu Âu: Pháp – Thụy Sỹ – Ý – San Marino – Vatican</h3>
+          <h3 class="card-title"><a href="tour/eu-phap-thuysy-y-vatican.html">Châu Âu: Pháp – Thụy Sỹ – Ý – San Marino – Vatican</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11 Ngày 10 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Emirates</span>
@@ -1015,20 +1017,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>77.900.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/eu-phap-thuysy-y-vatican.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d1" data-region="my-canada" data-days="11" data-price="129990000">
-        <div class="card-media">
+        <a class="card-media" href="tour/canada-lien-tuyen.html">
           <img src="assets/tours/canada-lien-tuyen.webp" alt="Canada liên tuyến Đông Tây: Vancouver – Montreal – Quebec – Ottawa – Toronto" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-new">Cao cấp</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 3★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>CAN280826LT</i></span>
-          <h3 class="card-title">Canada liên tuyến Đông Tây: Vancouver – Montreal – Quebec – Ottawa – Toronto</h3>
+          <h3 class="card-title"><a href="tour/canada-lien-tuyen.html">Canada liên tuyến Đông Tây: Vancouver – Montreal – Quebec – Ottawa – Toronto</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11 Ngày 10 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Eva Air</span>
@@ -1036,20 +1038,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>129.990.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/canada-lien-tuyen.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d2" data-region="dong-bac-a" data-days="4" data-price="18690000">
-        <div class="card-media">
+        <a class="card-media" href="tour/hongkong-tham-quyen.html">
           <img src="assets/tours/hongkong-tham-quyen.webp" alt="Hồng Kông – Thẩm Quyến" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag">Còn nhận khách</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>HKTQ170926CX</i></span>
-          <h3 class="card-title">Hồng Kông – Thẩm Quyến</h3>
+          <h3 class="card-title"><a href="tour/hongkong-tham-quyen.html">Hồng Kông – Thẩm Quyến</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 Ngày 3 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Cathay Pacific</span>
@@ -1057,20 +1059,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>18.690.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/hongkong-tham-quyen.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal" data-region="dong-bac-a" data-days="6" data-price="33990000">
-        <div class="card-media">
+        <a class="card-media" href="tour/nhat-narita-nagoya-osaka.html">
           <img src="assets/tours/nhat-narita-nagoya-osaka.webp" alt="Nhật Bản: Narita – Tokyo – Yamanashi – Nagoya – Osaka" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-hot">Bán chạy</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>NH270826-VJ6</i></span>
-          <h3 class="card-title">Nhật Bản: Narita – Tokyo – Yamanashi – Nagoya – Osaka</h3>
+          <h3 class="card-title"><a href="tour/nhat-narita-nagoya-osaka.html">Nhật Bản: Narita – Tokyo – Yamanashi – Nagoya – Osaka</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 Ngày 5 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Vietjet Air</span>
@@ -1078,20 +1080,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>33.990.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/nhat-narita-nagoya-osaka.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d1" data-region="dong-nam-a" data-days="4" data-price="8490000">
-        <div class="card-media">
+        <a class="card-media" href="tour/thai-phuket.html">
           <img src="assets/tours/thai-phuket.webp" alt="Thái Lan: Phuket" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-hot">Giá tốt nhất</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 3★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>TH290826-PK</i></span>
-          <h3 class="card-title">Thái Lan: Phuket</h3>
+          <h3 class="card-title"><a href="tour/thai-phuket.html">Thái Lan: Phuket</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 Ngày 3 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Bay thẳng</span>
@@ -1099,20 +1101,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>8.490.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/thai-phuket.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d2" data-region="dong-bac-a" data-days="6" data-price="36888000">
-        <div class="card-media">
+        <a class="card-media" href="tour/nhat-kansai-osaka-tokyo.html">
           <img src="assets/tours/nhat-kansai-osaka-tokyo.webp" alt="Nhật Bản: Kansai – Osaka – Yamanashi – Tokyo – Narita" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag">Còn nhận khách</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>NH280826-VJ6</i></span>
-          <h3 class="card-title">Nhật Bản: Kansai – Osaka – Yamanashi – Tokyo – Narita</h3>
+          <h3 class="card-title"><a href="tour/nhat-kansai-osaka-tokyo.html">Nhật Bản: Kansai – Osaka – Yamanashi – Tokyo – Narita</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 Ngày 5 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Vietjet Air</span>
@@ -1120,20 +1122,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>36.888.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/nhat-kansai-osaka-tokyo.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal" data-region="dong-bac-a" data-days="6" data-price="41888000">
-        <div class="card-media">
+        <a class="card-media" href="tour/nhat-narita-toyohashi-osaka.html">
           <img src="assets/tours/nhat-narita-toyohashi-osaka.webp" alt="Nhật Bản: Narita – Tokyo – Toyohashi – Osaka" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag">Còn nhận khách</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>NH270826-VN6</i></span>
-          <h3 class="card-title">Nhật Bản: Narita – Tokyo – Toyohashi – Osaka</h3>
+          <h3 class="card-title"><a href="tour/nhat-narita-toyohashi-osaka.html">Nhật Bản: Narita – Tokyo – Toyohashi – Osaka</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 Ngày 5 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Vietnam Airlines</span>
@@ -1141,20 +1143,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>41.888.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/nhat-narita-toyohashi-osaka.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d1" data-region="dong-bac-a" data-days="5" data-price="11990000">
-        <div class="card-media">
+        <a class="card-media" href="tour/trungquoc-hai-nam.html">
           <img src="assets/tours/trungquoc-hai-nam.webp" alt="Trung Quốc: Đảo Hải Nam" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-hot">Giá tốt</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>TQ170826HN5</i></span>
-          <h3 class="card-title">Trung Quốc: Đảo Hải Nam</h3>
+          <h3 class="card-title"><a href="tour/trungquoc-hai-nam.html">Trung Quốc: Đảo Hải Nam</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 Ngày 4 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Hainan Airlines</span>
@@ -1162,20 +1164,20 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>11.990.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/trungquoc-hai-nam.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card reveal d2" data-region="dong-bac-a" data-days="6" data-price="20990000">
-        <div class="card-media">
+        <a class="card-media" href="tour/hanquoc-busan-seoul.html">
           <img src="assets/tours/hanquoc-busan-seoul.webp" alt="Hàn Quốc: Busan – Gyeongju – Ulsan – Seoul" loading="lazy" width="900" height="600">
           <div class="card-tags"><span class="tag tag-hot">Bán chạy</span></div>
           <div class="card-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>Khách sạn 4★</div>
-        </div>
+        </a>
         <div class="card-body">
           <span class="card-code">Mã lịch <i>HQ190826BUVN</i></span>
-          <h3 class="card-title">Hàn Quốc: Busan – Gyeongju – Ulsan – Seoul</h3>
+          <h3 class="card-title"><a href="tour/hanquoc-busan-seoul.html">Hàn Quốc: Busan – Gyeongju – Ulsan – Seoul</a></h3>
           <div class="card-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 Ngày 5 Đêm</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Vietjet Air</span>
@@ -1183,7 +1185,7 @@ section{scroll-margin-top:92px}
           </div>
           <div class="card-foot">
             <span class="price"><small>Giá trọn gói từ</small><b>20.990.000<sup>₫</sup></b></span>
-            <a class="btn btn-navy btn-sm" href="#lien-he">Nhận tư vấn</a>
+            <a class="btn btn-navy btn-sm" href="tour/hanquoc-busan-seoul.html">Xem lịch trình</a>
           </div>
         </div>
       </article>
