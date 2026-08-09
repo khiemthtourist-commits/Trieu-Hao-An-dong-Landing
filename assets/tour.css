@@ -146,10 +146,26 @@ ul,ol{margin:0;padding:0}
 
 /* bảng giá bao gồm / thông tin bay */
 .rte{font-size:15.3px;color:#25384A}
-.rte table{width:100%;border-collapse:collapse;background:#fff;
+.rte table{width:100%;border-collapse:collapse;background:#fff;table-layout:auto;
   border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
-.rte td,.rte th{border:1px solid var(--line);padding:14px 16px;vertical-align:top}
-.rte td:first-child{background:var(--paper-2);font-weight:700;color:var(--navy-900);width:180px}
+.rte td,.rte th{border:1px solid var(--line);padding:14px 16px;vertical-align:top;
+  word-break:break-word;overflow-wrap:anywhere}
+/* cột nhãn: chỉ khi hàng có từ 2 ô trở lên */
+.rte tr > td:first-child:not(:only-child){background:var(--paper-2);font-weight:700;
+  color:var(--navy-900);width:23%;min-width:150px}
+/* hàng trải hết chiều ngang */
+.rte td.rte-head{background:var(--navy-800);color:#fff;font-weight:800;
+  font-size:14px;letter-spacing:.06em;text-transform:uppercase;width:auto;min-width:0}
+/* chữ bên trong thanh tiêu đề phải thừa hưởng màu trắng, không lấy màu navy mặc định */
+.rte td.rte-head *,.rte td.rte-head strong,.rte td.rte-head em{color:inherit}
+.rte td.rte-head p{margin:0}
+.rte td.rte-full{background:#fff;font-weight:400;color:#25384A;width:auto;min-width:0}
+.rte td:only-child{width:auto;min-width:0}
+/* bảng trong lịch trình từng ngày cũng theo quy tắc trên */
+.day-body td.rte-head{background:var(--paper-3);color:var(--navy-900);
+  font-weight:800;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}
+.day-body td.rte-head *{color:inherit}
+.day-body td.rte-full{background:#fff}
 .rte ol,.rte ul{margin:0;padding-left:20px}
 .rte li{margin-bottom:7px}
 .rte p{margin:0 0 9px}
@@ -275,4 +291,25 @@ ul,ol{margin:0;padding:0}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
+
+/* ============================================================
+   Bảng trên màn hình hẹp: xếp chồng nhãn lên trên nội dung
+   thay vì chia 2 cột chật chội
+   ============================================================ */
+@media (max-width:620px){
+  .rte table,.rte tbody,.rte tr,.rte td,.rte th{display:block;width:auto}
+  .rte table{border:1px solid var(--line);border-radius:var(--r-md)}
+  .rte tr{border-bottom:1px solid var(--line)}
+  .rte tr:last-child{border-bottom:0}
+  .rte td,.rte th{border:0;padding:12px 14px}
+  .rte tr > td:first-child:not(:only-child){
+    width:auto;min-width:0;background:var(--paper-2);
+    font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+    padding-bottom:10px;border-bottom:1px dashed var(--line)
+  }
+  .rte td.rte-head{border-radius:0}
+  .day-body table,.day-body tbody,.day-body tr,.day-body td{display:block;width:auto}
+  .day-body td{border:0;border-bottom:1px solid var(--line);padding:10px 0}
+  .day-body table{border:0}
 }
