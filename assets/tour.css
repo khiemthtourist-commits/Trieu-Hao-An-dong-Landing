@@ -341,20 +341,23 @@ ul,ol{margin:0;padding:0}
   padding:1px 5px;border-radius:5px;letter-spacing:.03em}
 .chip.active i{background:var(--amber);color:#241703}
 
-.sched-toolbar{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line);
-  box-shadow:var(--shadow-sm)}
-.sched-toolbar .wrap{display:flex;flex-wrap:wrap;gap:var(--s-3);align-items:center;padding-block:14px}
-.sched-search{flex:1 1 260px;position:relative}
+.sched-toolbar{background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.sched-toolbar .wrap{display:flex;flex-wrap:wrap;gap:var(--s-3);align-items:flex-end;padding-block:14px}
+.sched-search{flex:1 1 240px;position:relative;align-self:center}
 .sched-search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);
   width:17px;height:17px;color:var(--ink-soft)}
 .sched-search input{width:100%;padding:11px 14px 11px 40px;border:1.5px solid var(--line);
   border-radius:999px;background:var(--paper-2);font-size:14.5px}
 .sched-search input:focus{outline:0;border-color:var(--navy-500);background:#fff}
-.sched-select{padding:11px 34px 11px 16px;border:1.5px solid var(--line);border-radius:999px;
+.sched-field{display:flex;flex-direction:column;gap:5px;flex:0 1 190px;min-width:0}
+.sched-field label{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-soft);padding-left:4px}
+.sched-select{width:100%;padding:11px 34px 11px 16px;border:1.5px solid var(--line);border-radius:999px;
   background:var(--paper-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234C6076' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 13px center;
-  font-size:14px;font-weight:600;color:var(--navy-900);appearance:none;cursor:pointer}
+  font-size:13.5px;font-weight:600;color:var(--navy-900);appearance:none;cursor:pointer;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sched-select:focus{outline:0;border-color:var(--navy-500)}
-.sched-result-count{font-size:13px;color:var(--ink-soft);white-space:nowrap}
+.sched-result-count{font-size:13px;color:var(--ink-soft);white-space:nowrap;align-self:center;margin-left:auto}
 
 /* Bảng chính — 5 cột giống bản gốc: Tour | Số chỗ | Thời gian | Hãng bay | Giá tour */
 .sched-table-wrap{overflow-x:auto;margin-block:var(--s-5);border:1px solid var(--line);
@@ -417,6 +420,8 @@ ul,ol{margin:0;padding:0}
 
 @media (max-width:680px){
   .sched-toolbar .wrap{padding-block:11px}
+  .sched-search,.sched-field{flex-basis:100%}
+  .sched-result-count{margin-left:0}
   .sched-chips .wrap{padding-block:11px;gap:6px}
   .chip{padding:7px 12px;font-size:12.5px}
   .sched-table{min-width:760px}
