@@ -482,9 +482,9 @@ ul,ol{margin:0;padding:0}
 .person-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
   padding:var(--s-4) var(--s-4) var(--s-5);box-shadow:var(--shadow-sm);transition:box-shadow .22s var(--ease),transform .22s var(--ease)}
 .person-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.person-card .pc-avatar{width:132px;height:132px;border-radius:50%;flex:none;margin-bottom:16px;overflow:hidden;
+.person-card .pc-avatar{width:180px;height:180px;border-radius:50%;flex:none;margin-bottom:16px;overflow:hidden;
   background:linear-gradient(150deg,var(--navy-800),var(--navy-500));color:#fff;
-  display:grid;place-items:center;font-family:var(--font-display);font-size:36px;font-weight:800}
+  display:grid;place-items:center;font-family:var(--font-display);font-size:48px;font-weight:800}
 .person-card .pc-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
 .person-card h4{font-size:16.5px;font-weight:800;color:var(--navy-900);margin-bottom:3px}
 .person-card .pc-role{display:block;font-size:12.3px;font-weight:700;color:var(--amber-600);
