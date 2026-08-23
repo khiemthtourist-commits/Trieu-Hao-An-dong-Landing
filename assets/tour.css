@@ -184,6 +184,8 @@ ul,ol{margin:0;padding:0}
 .bookcard li svg{width:17px;height:17px;color:var(--teal);flex:none;margin-top:4px}
 .bookcard .btn{margin-bottom:9px}
 .bc-note{font-size:12.5px;color:var(--ink-soft);text-align:center;margin-top:var(--s-2)}
+.pdf-dl{color:var(--teal);border-color:var(--teal)}
+.pdf-dl:hover{background:var(--teal);border-color:var(--teal);color:#fff}
 
 .helpcard{background:linear-gradient(155deg,var(--navy-800),var(--navy-900));color:#fff;
   border-radius:var(--r-lg);padding:var(--s-4)}
@@ -381,6 +383,11 @@ ul,ol{margin:0;padding:0}
 .sched-name a:hover{color:var(--amber-600)}
 .sched-sub{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft)}
 .sched-sub svg{width:14px;height:14px;color:var(--navy-500);flex:none}
+.sched-pdf{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 12px;
+  border-radius:999px;border:1.5px solid var(--teal);color:var(--teal);
+  font-size:12px;font-weight:700;white-space:nowrap;transition:all .2s var(--ease)}
+.sched-pdf svg{width:13px;height:13px;flex:none}
+.sched-pdf:hover{background:var(--teal);color:#fff}
 
 .c-cho{white-space:nowrap}
 .sched-seats{display:inline-block;font-size:12px;font-weight:700;padding:4px 11px;border-radius:999px;margin-bottom:6px}
