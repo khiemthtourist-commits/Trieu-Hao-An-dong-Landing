@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/tour.css?v=6">
+<link rel="stylesheet" href="assets/tour.css?v=7">
 <link rel="icon" type="image/png" href="assets/thtourist-logo.png">
 </head>
 <body>
@@ -57,6 +57,12 @@
   </div>
 </section>
 
+<div class="sched-chips">
+  <div class="wrap" id="chipsRow">
+    <button class="chip active" data-dip="all" type="button">Tất cả</button>
+  </div>
+</div>
+
 <div class="sched-toolbar">
   <div class="wrap">
     <div class="sched-search">
@@ -83,7 +89,14 @@
 </div>
 
 <div class="wrap">
-  <div class="sched-list" id="schedList" aria-live="polite"></div>
+  <div class="sched-table-wrap">
+    <table class="sched-table">
+      <thead>
+        <tr><th>Tour</th><th>Số chỗ</th><th>Thời gian</th><th>Hãng bay</th><th>Giá tour</th></tr>
+      </thead>
+      <tbody id="schedBody"></tbody>
+    </table>
+  </div>
   <div class="sched-empty" id="schedEmpty">
     <b>Không tìm thấy lịch phù hợp</b>
     Thử từ khoá khác, hoặc gọi <a href="tel:0939114311"><b>0939 114 311</b></a> để nhân viên kiểm tra lịch nội bộ giúp bạn.
@@ -154,8 +167,32 @@
   var DATA = window.SCHEDULE_DATA || [];
   document.getElementById('totalCount').textContent = DATA.length + ' lịch khởi hành đang mở bán';
 
-  var PAGE_SIZE = 20;
-  var state = { q:'', vung:'all', sort:'ngay-asc', page:1 };
+  var PAGE_SIZE = 25;
+  var state = { q:'', vung:'all', dip:'all', sort:'ngay-asc', page:1 };
+
+  // Chips lọc theo dịp — giống bố cục "Tất cả / Tour khuyến mãi / HOT Lễ 2/9…" của trang gốc
+  (function buildChips(){
+    var counts = {};
+    DATA.forEach(function(r){ if(r.dip) counts[r.dip] = (counts[r.dip]||0)+1; });
+    var order = ['Mùa Thu','Lễ 2/9','Lễ/ Tết','Tour Tết Nguyên Đán','Giáng Sinh','Tour Noshop','Tour Khuyến Mãi','Hành Hương'];
+    var row = document.getElementById('chipsRow');
+    order.forEach(function(name){
+      if (!counts[name]) return;
+      var b = document.createElement('button');
+      b.className = 'chip'; b.type = 'button'; b.setAttribute('data-dip', name);
+      b.innerHTML = esc(name) + ' <i>HOT</i>';
+      row.appendChild(b);
+    });
+    row.addEventListener('click', function(e){
+      var btn = e.target.closest('button.chip');
+      if (!btn) return;
+      row.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
+      btn.classList.add('active');
+      state.dip = btn.getAttribute('data-dip');
+      state.page = 1;
+      render();
+    });
+  })();
 
   function parseGia(s){
     if(!s || s==='Liên hệ') return Infinity;
@@ -175,6 +212,7 @@
     var q = state.q.trim().toLowerCase();
     var rows = DATA.filter(function(r){
       if (state.vung!=='all' && r.bucket!==state.vung) return false;
+      if (state.dip!=='all' && r.dip!==state.dip) return false;
       if (q && r.ten.toLowerCase().indexOf(q)===-1 && r.maLich.toLowerCase().indexOf(q)===-1) return false;
       return true;
     });
@@ -196,7 +234,6 @@
   }
 
   function rowHtml(r){
-    var db = dateBits(r.ngayDiSort);
     var nameInner = r.slug
       ? '<a href="tour/'+r.slug+'.html">'+esc(r.ten)+'</a>'
       : esc(r.ten);
@@ -204,26 +241,30 @@
       ? '<del>'+esc(r.giaGoc)+' ₫</del><b>'+esc(r.giaSale)+' ₫</b>'
       : '<b>'+esc(r.giaSale)+(r.giaSale!=='Liên hệ'?' ₫':'')+'</b>';
     return ''
-      +'<article class="sched-row">'
-      +'<div class="sched-date"><b>'+db.d+'</b><span>'+db.m+'</span></div>'
-      +'<div class="sched-main">'
+      +'<tr>'
+      +'<td class="c-tour">'
         +'<div class="sched-badges">'
           +'<span class="sb sb-vung">'+esc(VUNG_LABEL[r.bucket]||r.vung)+'</span>'
-          +'<span class="sb sb-ma">'+esc(r.maLich)+'</span>'
-          +(r.conCho<=2?'<span class="sb sb-hot">Sắp hết chỗ</span>':'')
+          +'<span class="sb sb-ma">Mã Lịch: '+esc(r.maLich)+'</span>'
+          +(r.dip?'<span class="sb sb-dip">'+esc(r.dip)+'</span>':'')
         +'</div>'
-        +'<h3 class="sched-name">'+nameInner+'</h3>'
-        +'<div class="sched-meta">'
-          +'<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'+esc(r.thoiLuong)+'</span>'
-          +'<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>'+esc(r.hangBay||'—')+'</span>'
-          +'<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>Về '+esc(r.ngayVe)+'</span>'
-        +'</div>'
-      +'</div>'
-      +'<div class="sched-right">'
+        +'<div class="sched-name">'+nameInner+'</div>'
+        +'<div class="sched-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'+esc(r.thoiLuong)+'</div>'
+      +'</td>'
+      +'<td class="c-cho">'
         +'<span class="sched-seats '+seatClass(r.conCho)+'">Còn '+r.conCho+' chỗ</span>'
-        +'<span class="sched-price">'+giaHtml+'</span>'
-      +'</div>'
-      +'</article>';
+        +'<span class="c-tong">Tổng '+r.soCho+' chỗ</span>'
+      +'</td>'
+      +'<td class="c-ngay">'
+        +'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>Đi: <b>'+esc(r.ngayDi)+'</b></div>'
+        +'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>Về: <b>'+esc(r.ngayVe)+'</b></div>'
+      +'</td>'
+      +'<td class="c-bay">'
+        +'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Đi: '+esc(r.bayDi||'—')+'</div>'
+        +(r.bayVe?'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>Về: '+esc(r.bayVe)+'</div>':'')
+      +'</td>'
+      +'<td class="c-gia">'+giaHtml+'<a class="btn btn-navy btn-sm" href="index.html#lien-he">Tư vấn</a></td>'
+      +'</tr>';
   }
 
   function pagerHtml(total, page){
@@ -249,7 +290,7 @@
     if (state.page>pages) state.page=pages;
     var start = (state.page-1)*PAGE_SIZE;
     var pageRows = rows.slice(start, start+PAGE_SIZE);
-    document.getElementById('schedList').innerHTML = pageRows.map(rowHtml).join('');
+    document.getElementById('schedBody').innerHTML = pageRows.map(rowHtml).join('');
     document.getElementById('pager').innerHTML = rows.length>PAGE_SIZE ? pagerHtml(rows.length, state.page) : '';
   }
 
