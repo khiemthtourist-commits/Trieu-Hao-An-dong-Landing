@@ -442,9 +442,9 @@ ul,ol{margin:0;padding:0}
 .about-hero .ab-tag{display:inline-flex;align-items:center;gap:7px;padding:6px 15px;border-radius:999px;
   background:rgba(242,162,12,.16);border:1px solid rgba(242,162,12,.4);color:var(--amber);
   font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:var(--s-4)}
-.about-hero h1{font-family:var(--font-display);font-size:clamp(28px,4vw,46px);font-weight:800;
-  letter-spacing:-.015em;margin:0 auto 12px;max-width:16ch}
-.about-hero p{color:#B0C6D9;font-size:16px;max-width:56ch;margin-inline:auto}
+.about-hero h1{font-family:var(--font-display);font-size:clamp(26px,3.4vw,42px);font-weight:800;
+  letter-spacing:-.015em;margin:0 auto 12px;max-width:44ch}
+.about-hero p{color:#B0C6D9;font-size:16px;max-width:80ch;margin-inline:auto}
 
 .ab-sec{padding-block:clamp(48px,7vw,88px)}
 .ab-sec.on-paper{background:var(--paper-2)}
@@ -457,7 +457,7 @@ ul,ol{margin:0;padding:0}
 .ab-lead{font-size:15.3px;color:var(--ink-soft);line-height:1.75}
 
 /* Khối giới thiệu công ty */
-.about-intro{max-width:760px;margin-inline:auto;text-align:center}
+.about-intro{max-width:920px;margin-inline:auto;text-align:center}
 .about-intro p{font-size:15.5px;color:#25384A;line-height:1.85;margin-bottom:16px}
 .about-intro p:last-child{margin-bottom:0}
 .about-intro strong{color:var(--navy-900)}
@@ -483,7 +483,7 @@ ul,ol{margin:0;padding:0}
   border-top:1px dashed var(--line)}
 .team-photo-block figure{margin:0 0 var(--s-4)}
 .team-photo-block img{width:100%;height:auto;border-radius:var(--r-lg);box-shadow:var(--shadow-md);display:block}
-.team-note{max-width:680px;margin:0 auto;text-align:center;font-size:14.3px;
+.team-note{max-width:900px;margin:0 auto;text-align:center;font-size:14.3px;
   color:var(--ink-soft);line-height:1.8}
 .team-note strong{color:var(--navy-900)}
 
