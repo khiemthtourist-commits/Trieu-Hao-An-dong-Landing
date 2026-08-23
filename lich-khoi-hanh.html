@@ -158,8 +158,8 @@
   var state = { q:'', vung:'all', sort:'ngay-asc', page:1 };
 
   function parseGia(s){
-    if(!s || s==='Liên hệ') return -1;
-    return parseInt(s.replace(/[^\d]/g,''),10) || -1;
+    if(!s || s==='Liên hệ') return Infinity;
+    return parseInt(s.replace(/[^\d]/g,''),10) || Infinity;
   }
   function dateBits(iso){
     var p=iso.split('-'); return {d:p[2], m:THANG[parseInt(p[1],10)-1]};
@@ -179,9 +179,18 @@
       return true;
     });
     rows = rows.slice();
+    function byGia(dir){
+      return function(a,b){
+        var ga=parseGia(a.giaSale), gb=parseGia(b.giaSale);
+        if (ga===Infinity && gb===Infinity) return 0;
+        if (ga===Infinity) return 1;
+        if (gb===Infinity) return -1;
+        return dir*(ga-gb);
+      };
+    }
     if (state.sort==='ngay-asc') rows.sort(function(a,b){return a.ngayDiSort<b.ngayDiSort?-1:1;});
-    else if (state.sort==='gia-asc') rows.sort(function(a,b){return parseGia(a.giaSale)-parseGia(b.giaSale);});
-    else if (state.sort==='gia-desc') rows.sort(function(a,b){return parseGia(b.giaSale)-parseGia(a.giaSale);});
+    else if (state.sort==='gia-asc') rows.sort(byGia(1));
+    else if (state.sort==='gia-desc') rows.sort(byGia(-1));
     else if (state.sort==='cho-asc') rows.sort(function(a,b){return a.conCho-b.conCho;});
     return rows;
   }
