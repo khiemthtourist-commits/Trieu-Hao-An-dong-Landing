@@ -443,7 +443,7 @@ ul,ol{margin:0;padding:0}
   background:rgba(242,162,12,.16);border:1px solid rgba(242,162,12,.4);color:var(--amber);
   font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:var(--s-4)}
 .about-hero h1{font-family:var(--font-display);font-size:clamp(26px,3.4vw,42px);font-weight:800;
-  letter-spacing:-.015em;margin:0 auto 12px;max-width:44ch}
+  letter-spacing:-.015em;line-height:1.5;margin:0 auto 16px;max-width:44ch}
 .about-hero p{color:#B0C6D9;font-size:16px;max-width:80ch;margin-inline:auto}
 
 .ab-sec{padding-block:clamp(48px,7vw,88px)}
