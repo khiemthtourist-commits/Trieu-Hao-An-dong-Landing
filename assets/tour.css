@@ -479,8 +479,12 @@ ul,ol{margin:0;padding:0}
 .member-row.mr-lead{max-width:none;border-color:var(--amber);border-width:1.5px}
 .member-row.mr-lead .mr-body h3{font-size:24px}
 
-.team-note{max-width:680px;margin:var(--s-6) auto 0;text-align:center;font-size:14.3px;
-  color:var(--ink-soft);line-height:1.8;padding-top:var(--s-5);border-top:1px dashed var(--line)}
+.team-photo-block{max-width:900px;margin:var(--s-6) auto 0;padding-top:var(--s-5);
+  border-top:1px dashed var(--line)}
+.team-photo-block figure{margin:0 0 var(--s-4)}
+.team-photo-block img{width:100%;height:auto;border-radius:var(--r-lg);box-shadow:var(--shadow-md);display:block}
+.team-note{max-width:680px;margin:0 auto;text-align:center;font-size:14.3px;
+  color:var(--ink-soft);line-height:1.8}
 .team-note strong{color:var(--navy-900)}
 
 /* Giá trị cốt lõi */
