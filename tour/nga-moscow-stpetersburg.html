@@ -226,6 +226,7 @@
   <a href="#dang-ky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M4 7l8 5 8-5"/></svg>Tư vấn</a>
 </nav>
 
+<script src="../assets/lead-submit.js"></script>
 <script>
 (function(){
   'use strict';
@@ -242,12 +243,33 @@
     var badName=name.length<2, badPhone=!/^(0|\+84)\d{9,10}$/.test(phone);
     setInvalid('f-name',badName); setInvalid('f-phone',badPhone);
     if(badName||badPhone){ var f=form.querySelector('.field.invalid input'); if(f) f.focus(); return; }
-    /* Chưa gắn backend: thay đoạn này bằng fetch() tới CRM / Google Sheet của Triều Hảo An Đông */
-    document.getElementById('okMsg').innerHTML =
-      'Cảm ơn <b>'+name.replace(/[<>&]/g,'')+'</b>. Chuyên viên phụ trách tuyến <b>Nga: Moscow – Saint Petersburg</b> sẽ gọi lại số <b>'+phone+
-      '</b> trong 15 phút giờ hành chính. Cần gấp? Gọi <a href="tel:0939114311"><b>0939 114 311</b></a>.';
-    form.style.display='none'; okBox.classList.add('show');
-    okBox.scrollIntoView({behavior:'smooth',block:'center'});
+
+    var note = document.getElementById('in-note').value.trim();
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var oldBtnHtml = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Đang gửi…';
+
+    submitLead({
+      trang: location.pathname,
+      tour: 'Nga: Moscow – Saint Petersburg',
+      hoTen: name,
+      soDienThoai: phone,
+      ghiChu: note
+    }).then(function(res){
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = oldBtnHtml;
+
+      if (res && res.ok){
+        document.getElementById('okMsg').innerHTML =
+          'Cảm ơn <b>'+name.replace(/[<>&]/g,'')+'</b>. Chuyên viên phụ trách tuyến <b>Nga: Moscow – Saint Petersburg</b> sẽ gọi lại số <b>'+phone+
+          '</b> trong 15 phút giờ hành chính. Cần gấp? Gọi <a href="tel:0939114311"><b>0939 114 311</b></a>.';
+        form.style.display='none'; okBox.classList.add('show');
+        okBox.scrollIntoView({behavior:'smooth',block:'center'});
+      } else {
+        alert('Không gửi được yêu cầu, có thể do mạng chập chờn. Vui lòng thử lại, hoặc gọi ngay 0939 114 311 để được hỗ trợ trực tiếp.');
+      }
+    });
   });
   ['in-name','in-phone'].forEach(function(id){
     document.getElementById(id).addEventListener('input', function(){
