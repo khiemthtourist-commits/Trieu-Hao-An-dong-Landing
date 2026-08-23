@@ -289,6 +289,16 @@
     return rows;
   }
 
+  var PDF_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>';
+  function pdfLinkHtml(r){
+    if (r.slug){
+      return '<a class="sched-pdf" href="assets/tour-pdfs/'+r.slug+'.pdf" download>'+PDF_ICON+'Tải chương trình (PDF)</a>';
+    }
+    if (r.pdfExternal){
+      return '<a class="sched-pdf" href="'+esc(r.pdfExternal)+'" target="_blank" rel="noopener">'+PDF_ICON+'Tải chương trình (PDF)</a>';
+    }
+    return '';
+  }
   function rowHtml(r){
     var nameInner = r.slug
       ? '<a href="tour/'+r.slug+'.html">'+esc(r.ten)+'</a>'
@@ -306,7 +316,7 @@
         +'</div>'
         +'<div class="sched-name">'+nameInner+'</div>'
         +'<div class="sched-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'+esc(r.thoiLuong)+'</div>'
-        +(r.slug ? '<a class="sched-pdf" href="assets/tour-pdfs/'+r.slug+'.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>Tải chương trình (PDF)</a>' : '')
+        +pdfLinkHtml(r)
       +'</td>'
       +'<td class="c-cho">'
         +'<span class="sched-seats '+seatClass(r.conCho)+'">Còn '+r.conCho+' chỗ</span>'
