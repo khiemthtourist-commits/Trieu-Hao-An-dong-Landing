@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lịch khởi hành | Triều Hảo An Đông</title>
+<meta name="description" content="Toàn bộ lịch khởi hành các tour outbound và tour trong nước của Triều Hảo — cập nhật trực tiếp, đủ ngày đi, ngày về, hãng bay, số chỗ còn và giá.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tour.css?v=6">
+<link rel="icon" type="image/png" href="assets/thtourist-logo.png">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>Triều Hảo An Đông: <b>93 Trần Hưng Đạo, Phường An Đông, Tp. Hồ Chí Minh</b></span>
+      <span class="topbar-mini">Triều Hảo An Đông · <b>Hotline 0939 114 311</b></span>
+    </div>
+    <div class="topbar-right"><span>Hotline <b>0939 114 311</b></span></div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a class="brand" href="index.html" aria-label="Triều Hảo An Đông — về trang chủ">
+        <img class="brand-logo" src="assets/thtourist-logo.png" alt="THTourist An Đông – Công ty Lữ hành Quốc tế Triều Hảo" width="800" height="463">
+        <span class="brand-branch"><b>Triều Hảo<br>An Đông</b></span>
+      </a>
+      <div class="nav-cta">
+        <span class="nav-phone">
+          <small>Hotline 24/7</small>
+          <a href="tel:0939114311"><b>0939 114 311</b></a>
+        </span>
+        <a class="btn btn-primary btn-sm" href="index.html#lien-he">Tư vấn ngay</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumb" aria-label="Đường dẫn">
+  <div class="wrap">
+    <a href="index.html">Trang chủ</a> ›
+    <span>Lịch khởi hành</span>
+  </div>
+</nav>
+
+<section class="sched-hero">
+  <div class="wrap">
+    <h1>Lịch khởi hành</h1>
+    <p>Toàn bộ đoàn sắp khởi hành của hệ thống Triều Hảo, cập nhật trực tiếp từ hệ thống điều hành tour —
+      đủ ngày đi, ngày về, hãng bay, số chỗ còn và giá trọn gói.</p>
+    <span class="count" id="totalCount">Đang tải…</span>
+  </div>
+</section>
+
+<div class="sched-toolbar">
+  <div class="wrap">
+    <div class="sched-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="text" id="q" placeholder="Tìm theo tên tour, mã lịch…" autocomplete="off">
+    </div>
+    <select class="sched-select" id="fVung">
+      <option value="all">Tất cả điểm đến</option>
+      <option value="chau-au">Châu Âu</option>
+      <option value="dong-bac-a">Đông Bắc Á</option>
+      <option value="dong-nam-a">Đông Nam Á</option>
+      <option value="my-canada">Mỹ – Canada</option>
+      <option value="trong-nuoc">Trong nước</option>
+      <option value="khac">Khác</option>
+    </select>
+    <select class="sched-select" id="fSort">
+      <option value="ngay-asc">Khởi hành gần nhất</option>
+      <option value="gia-asc">Giá thấp đến cao</option>
+      <option value="gia-desc">Giá cao đến thấp</option>
+      <option value="cho-asc">Còn ít chỗ nhất</option>
+    </select>
+    <span class="sched-result-count" id="resultCount"></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sched-list" id="schedList" aria-live="polite"></div>
+  <div class="sched-empty" id="schedEmpty">
+    <b>Không tìm thấy lịch phù hợp</b>
+    Thử từ khoá khác, hoặc gọi <a href="tel:0939114311"><b>0939 114 311</b></a> để nhân viên kiểm tra lịch nội bộ giúp bạn.
+  </div>
+  <div class="sched-pager" id="pager"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <span class="foot-logo"><img src="assets/thtourist-logo.png" alt="THTourist An Đông" width="800" height="463"></span>
+        <p><b style="color:#E2EDF6">Triều Hảo An Đông</b> — chuyên tour outbound, tour trong nước và dịch vụ visa cho khách cá nhân và doanh nghiệp</p>
+        <div class="foot-legal">
+          <b>Địa chỉ:</b> 93 Trần Hưng Đạo, Phường An Đông, Tp. Hồ Chí Minh<br>
+          <b>Hotline:</b> <a href="tel:0939114311">0939 114 311</a><br>
+          <b>Giấy phép kinh doanh dịch vụ lữ hành quốc tế</b>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="index.html#tours">Tour nước ngoài</a></li>
+          <li><a href="index.html#trong-nuoc">Tour trong nước</a></li>
+          <li><a href="index.html#visa">Dịch vụ visa</a></li>
+          <li><a href="lich-khoi-hanh.html">Lịch khởi hành</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Kết nối</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/thtouristvn" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/@trieuhaoandong" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://zalo.me/0939114311" target="_blank" rel="noopener">Zalo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 THtourist – Triều Hảo An Đông, chi nhánh của Công ty TNHH TMDV Du Lịch Triều Hảo. Bảo lưu mọi quyền.</div>
+  </div>
+</footer>
+
+<div class="float-contact" aria-label="Liên hệ nhanh">
+  <a class="fc-phone" href="tel:0939114311" aria-label="Gọi hotline 0939 114 311"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></a>
+  <a class="fc-zalo" href="https://zalo.me/0939114311" target="_blank" rel="noopener" aria-label="Chat Zalo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5A8.4 8.4 0 0112 20a8.6 8.6 0 01-3.8-.9L3 20.5l1.5-4.9A8.4 8.4 0 0112 3a8.4 8.4 0 019 8.5z"/></svg></a>
+  <a class="fc-mess" href="https://m.me/thtouristvn" target="_blank" rel="noopener" aria-label="Chat Messenger"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.7 7.1V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.3S17.5 2 12 2zm1.1 12.4l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg></a>
+</div>
+
+<nav class="mobilebar" aria-label="Liên hệ nhanh trên di động">
+  <a class="mb-call" href="tel:0939114311"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>Gọi ngay</a>
+  <a class="mb-zalo" href="https://zalo.me/0939114311" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5A8.4 8.4 0 0112 20a8.6 8.6 0 01-3.8-.9L3 20.5l1.5-4.9A8.4 8.4 0 0112 3a8.4 8.4 0 019 8.5z"/></svg>Zalo</a>
+  <a href="https://m.me/thtouristvn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.7 7.1V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.3S17.5 2 12 2zm1.1 12.4l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7z"/></svg>Messenger</a>
+  <a href="index.html#lien-he"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M4 7l8 5 8-5"/></svg>Tư vấn</a>
+</nav>
+
+<script src="assets/schedule-data.js"></script>
+<script>
+(function(){
+  'use strict';
+  var header=document.getElementById('siteHeader');
+  var onScroll=function(){header.classList.toggle('is-stuck', window.scrollY>8);};
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var VUNG_LABEL={'chau-au':'Châu Âu','dong-bac-a':'Đông Bắc Á','dong-nam-a':'Đông Nam Á',
+    'my-canada':'Mỹ – Canada','trong-nuoc':'Trong nước','khac':'Khác'};
+  var THANG=['Th1','Th2','Th3','Th4','Th5','Th6','Th7','Th8','Th9','Th10','Th11','Th12'];
+
+  var DATA = window.SCHEDULE_DATA || [];
+  document.getElementById('totalCount').textContent = DATA.length + ' lịch khởi hành đang mở bán';
+
+  var PAGE_SIZE = 20;
+  var state = { q:'', vung:'all', sort:'ngay-asc', page:1 };
+
+  function parseGia(s){
+    if(!s || s==='Liên hệ') return -1;
+    return parseInt(s.replace(/[^\d]/g,''),10) || -1;
+  }
+  function dateBits(iso){
+    var p=iso.split('-'); return {d:p[2], m:THANG[parseInt(p[1],10)-1]};
+  }
+  function seatClass(n){
+    if(n<=2) return 'seats-one';
+    if(n<=6) return 'seats-few';
+    return 'seats-many';
+  }
+  function esc(s){ return (s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+
+  function filtered(){
+    var q = state.q.trim().toLowerCase();
+    var rows = DATA.filter(function(r){
+      if (state.vung!=='all' && r.bucket!==state.vung) return false;
+      if (q && r.ten.toLowerCase().indexOf(q)===-1 && r.maLich.toLowerCase().indexOf(q)===-1) return false;
+      return true;
+    });
+    rows = rows.slice();
+    if (state.sort==='ngay-asc') rows.sort(function(a,b){return a.ngayDiSort<b.ngayDiSort?-1:1;});
+    else if (state.sort==='gia-asc') rows.sort(function(a,b){return parseGia(a.giaSale)-parseGia(b.giaSale);});
+    else if (state.sort==='gia-desc') rows.sort(function(a,b){return parseGia(b.giaSale)-parseGia(a.giaSale);});
+    else if (state.sort==='cho-asc') rows.sort(function(a,b){return a.conCho-b.conCho;});
+    return rows;
+  }
+
+  function rowHtml(r){
+    var db = dateBits(r.ngayDiSort);
+    var nameInner = r.slug
+      ? '<a href="tour/'+r.slug+'.html">'+esc(r.ten)+'</a>'
+      : esc(r.ten);
+    var giaHtml = r.coGiaTot
+      ? '<del>'+esc(r.giaGoc)+' ₫</del><b>'+esc(r.giaSale)+' ₫</b>'
+      : '<b>'+esc(r.giaSale)+(r.giaSale!=='Liên hệ'?' ₫':'')+'</b>';
+    return ''
+      +'<article class="sched-row">'
+      +'<div class="sched-date"><b>'+db.d+'</b><span>'+db.m+'</span></div>'
+      +'<div class="sched-main">'
+        +'<div class="sched-badges">'
+          +'<span class="sb sb-vung">'+esc(VUNG_LABEL[r.bucket]||r.vung)+'</span>'
+          +'<span class="sb sb-ma">'+esc(r.maLich)+'</span>'
+          +(r.conCho<=2?'<span class="sb sb-hot">Sắp hết chỗ</span>':'')
+        +'</div>'
+        +'<h3 class="sched-name">'+nameInner+'</h3>'
+        +'<div class="sched-meta">'
+          +'<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'+esc(r.thoiLuong)+'</span>'
+          +'<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15l3 1 4-4-6-2 1.6-1.5 8 1.6 4-4a2.2 2.2 0 013.1 3.1l-4 4 1.6 8L15.6 22l-2-6-4 4 1 3-1.5 1z"/></svg>'+esc(r.hangBay||'—')+'</span>'
+          +'<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>Về '+esc(r.ngayVe)+'</span>'
+        +'</div>'
+      +'</div>'
+      +'<div class="sched-right">'
+        +'<span class="sched-seats '+seatClass(r.conCho)+'">Còn '+r.conCho+' chỗ</span>'
+        +'<span class="sched-price">'+giaHtml+'</span>'
+      +'</div>'
+      +'</article>';
+  }
+
+  function pagerHtml(total, page){
+    var pages = Math.max(1, Math.ceil(total/PAGE_SIZE));
+    if (page>pages) page=pages;
+    var html = '<button '+(page<=1?'disabled':'')+' data-go="'+(page-1)+'">‹ Trước</button>';
+    var addBtn=function(n){ html += '<button class="'+(n===page?'active':'')+'" data-go="'+n+'">'+n+'</button>'; };
+    var addDots=function(){ html += '<span>…</span>'; };
+    var shown = {};
+    [1,2,pages-1,pages,page-1,page,page+1].forEach(function(n){ if(n>=1 && n<=pages) shown[n]=true; });
+    var keys = Object.keys(shown).map(Number).sort(function(a,b){return a-b;});
+    var prev=0;
+    keys.forEach(function(n){ if(prev && n-prev>1) addDots(); addBtn(n); prev=n; });
+    html += '<button '+(page>=pages?'disabled':'')+' data-go="'+(page+1)+'">Sau ›</button>';
+    return html;
+  }
+
+  function render(){
+    var rows = filtered();
+    document.getElementById('resultCount').textContent = rows.length + ' kết quả';
+    document.getElementById('schedEmpty').classList.toggle('show', rows.length===0);
+    var pages = Math.max(1, Math.ceil(rows.length/PAGE_SIZE));
+    if (state.page>pages) state.page=pages;
+    var start = (state.page-1)*PAGE_SIZE;
+    var pageRows = rows.slice(start, start+PAGE_SIZE);
+    document.getElementById('schedList').innerHTML = pageRows.map(rowHtml).join('');
+    document.getElementById('pager').innerHTML = rows.length>PAGE_SIZE ? pagerHtml(rows.length, state.page) : '';
+  }
+
+  var qEl=document.getElementById('q'), timer=null;
+  qEl.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){ state.q=qEl.value; state.page=1; render(); }, 180);
+  });
+  document.getElementById('fVung').addEventListener('change', function(e){ state.vung=e.target.value; state.page=1; render(); });
+  document.getElementById('fSort').addEventListener('change', function(e){ state.sort=e.target.value; render(); });
+  document.getElementById('pager').addEventListener('click', function(e){
+    var btn=e.target.closest('button[data-go]');
+    if(!btn || btn.disabled) return;
+    state.page=parseInt(btn.getAttribute('data-go'),10);
+    render();
+    window.scrollTo({top:document.querySelector('.sched-toolbar').offsetTop-90, behavior:'smooth'});
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
