@@ -1,0 +1,27 @@
+/* Shared travel-information navigation for secondary pages. */
+.site-header .nav{grid-template-columns:1fr auto auto;gap:20px}
+.travel-info-nav{position:relative;justify-self:end;min-width:0}
+.travel-info-nav summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;cursor:pointer;padding:11px 16px;border-radius:12px;font-size:14px;font-weight:700;color:var(--navy-800);white-space:nowrap}
+.travel-info-nav summary::-webkit-details-marker{display:none}
+.travel-info-nav summary:hover,.travel-info-nav[open] summary{background:var(--paper-3)}
+.travel-info-nav summary:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.travel-info-nav summary span{transition:transform .2s}
+.travel-info-nav[open] summary span{transform:rotate(180deg)}
+.travel-info-panel{position:absolute;top:calc(100% + 10px);right:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:14px;width:min(450px,calc(100vw - 48px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lg);z-index:80}
+.travel-info-panel a{display:block;padding:12px;border-radius:10px;font-size:14px;font-weight:600;color:var(--navy-800);text-wrap:balance}
+.travel-info-panel a:hover,.travel-info-panel a:focus-visible{background:var(--amber-soft);color:var(--navy-900)}
+@media(max-width:1100px){.site-header .nav-phone{display:none}}
+@media(max-width:760px){
+ .site-header .nav{grid-template-columns:minmax(0,1fr) auto;gap:8px;padding-block:10px}
+ .site-header .brand{grid-column:1;grid-row:1;gap:8px}
+ .site-header .brand-logo{height:42px}
+ .site-header .brand-branch{padding-left:8px}
+ .site-header .brand-branch b{font-size:12.5px}
+ .site-header .nav-cta{grid-column:2;grid-row:1;gap:0}
+ .site-header .nav-cta > .btn-outline{display:none}
+ .site-header .nav-cta > .btn-primary{padding:10px 12px;font-size:12.5px}
+ .travel-info-nav{grid-column:1/-1;grid-row:2;justify-self:stretch}
+ .travel-info-nav summary{padding:10px 12px;background:var(--paper-2);font-size:13.5px}
+ .travel-info-panel{position:static;width:100%;margin-top:8px;box-shadow:none;padding:8px}
+}
+@media(prefers-reduced-motion:reduce){.travel-info-nav summary span{transition:none}}
