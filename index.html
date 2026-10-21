@@ -1743,7 +1743,7 @@ section{scroll-margin-top:92px}
   </a>
 </nav>
 
-<script src="assets/lead-submit.js"></script>
+<script src="assets/lead-submit.js?v=2"></script>
 <script>
 (function(){
   'use strict';
@@ -1856,6 +1856,13 @@ section{scroll-margin-top:92px}
   /* ---------- Form tư vấn ---------- */
   var form  = document.getElementById('leadForm');
   var okBox = document.getElementById('formOk');
+  var guideSource = new URLSearchParams(window.location.search).get('from');
+  var chinaGuides = ['/tour-trung-quoc.html', '/tour-thuong-hai-o-tran-hang-chau.html',
+    '/tour-truong-gia-gioi-phuong-hoang-co-tran.html', '/tour-thanh-do-cuu-trai-cau.html'];
+  if (chinaGuides.indexOf(guideSource) !== -1) {
+    document.getElementById('in-dest').value = 'Tour Trung Quốc – Đài Loan';
+  }
+
 
   function setInvalid(id, bad){
     document.getElementById(id).classList.toggle('invalid', bad);
