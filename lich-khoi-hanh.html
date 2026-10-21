@@ -396,6 +396,12 @@
     window.scrollTo({top:document.querySelector('.sched-toolbar').offsetTop-90, behavior:'smooth'});
   });
 
+  var requestedDestination = new URLSearchParams(window.location.search).get('diem-den');
+  if (requestedDestination && DATA.some(function(r){ return r.vung === requestedDestination; })) {
+    state.diemDen = requestedDestination;
+    elDiemDen.value = requestedDestination;
+    buildTuyen();
+  }
   render();
 })();
 </script>
