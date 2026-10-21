@@ -1,0 +1,176 @@
+{
+  "campaign": "China SEO 30 days",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "start": "2026-10-22",
+  "end": "2026-11-20",
+  "authorization": "User explicitly authorized writing, publishing 12 articles and reversible SEO website improvements on 2026-10-21.",
+  "maximum_articles": 12,
+  "articles": [
+    {
+      "id": 1,
+      "scheduled_date": "2026-10-23",
+      "slug": "tour-le-giang-shangrila",
+      "title": "Tour Lệ Giang – Shangrila từ TP.HCM: chọn hành trình nào?",
+      "intent": "le giang",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 2,
+      "scheduled_date": "2026-10-26",
+      "slug": "tour-bac-kinh-thuong-hai",
+      "title": "Tour Bắc Kinh – Thượng Hải: phù hợp với ai?",
+      "intent": "bac kinh",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 3,
+      "scheduled_date": "2026-10-28",
+      "slug": "tour-trung-quoc-shopping-no-shopping",
+      "title": "Tour Trung Quốc shopping và no-shopping khác nhau thế nào?",
+      "intent": "shopping",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 4,
+      "scheduled_date": "2026-10-30",
+      "slug": "tour-cap-nhi-tan-lang-tuyet-huong",
+      "title": "Tour Cáp Nhĩ Tân – Làng Tuyết Hương: chuẩn bị gì?",
+      "intent": "cap nhi tan",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 5,
+      "scheduled_date": "2026-11-02",
+      "slug": "tour-trung-quoc-thang-12",
+      "title": "Đi Trung Quốc tháng 12: chọn tuyến theo sở thích",
+      "intent": "thang 12",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 6,
+      "scheduled_date": "2026-11-04",
+      "slug": "tour-thuong-hai-disneyland",
+      "title": "Tour Thượng Hải có Disneyland: kiểm tra gì trước khi đặt?",
+      "intent": "disneyland",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 7,
+      "scheduled_date": "2026-11-06",
+      "slug": "le-giang-shangrila-hay-cuu-trai-cau",
+      "title": "Lệ Giang – Shangrila hay Cửu Trại Câu: nên chọn tuyến nào?",
+      "intent": "so sanh",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 8,
+      "scheduled_date": "2026-11-09",
+      "slug": "tour-trung-quoc-gia-dinh-tre-nho",
+      "title": "Tour Trung Quốc cho gia đình có trẻ nhỏ: cách chọn",
+      "intent": "gia dinh",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 9,
+      "scheduled_date": "2026-11-11",
+      "slug": "gia-tour-trung-quoc-bao-gom-gi",
+      "title": "Giá tour Trung Quốc gồm những gì, có thể phát sinh khoản nào?",
+      "intent": "chi phi",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 10,
+      "scheduled_date": "2026-11-13",
+      "slug": "tour-trung-quoc-tet-2027",
+      "title": "Tour Trung Quốc Tết 2027: cách chọn lịch và dịch vụ",
+      "intent": "tet",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 11,
+      "scheduled_date": "2026-11-16",
+      "slug": "ho-so-di-tour-trung-quoc",
+      "title": "Hồ sơ đi tour Trung Quốc: cần chuẩn bị gì?",
+      "intent": "visa",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    },
+    {
+      "id": 12,
+      "scheduled_date": "2026-11-18",
+      "slug": "tour-trung-quoc-nguoi-lon-tuoi",
+      "title": "Tour Trung Quốc cho người lớn tuổi: đọc lịch trình thế nào?",
+      "intent": "nguoi lon tuoi",
+      "status": "pending",
+      "published_url": null,
+      "published_at": null,
+      "sources": []
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2026-10-22",
+      "task": "Audit metadata, internal links, mobile CTA, form path and schedule/PDF accuracy; fix verified issues."
+    },
+    {
+      "date": "2026-10-29",
+      "task": "Upgrade existing China guides; evaluate indexing and internal links without fabricating traffic."
+    },
+    {
+      "date": "2026-11-05",
+      "task": "Compare available Search Console performance and aggregate lead counts; refine titles only where evidence supports."
+    },
+    {
+      "date": "2026-11-12",
+      "task": "Review mobile layout, information accuracy and form drop-off evidence if available; refresh relevant guides."
+    },
+    {
+      "date": "2026-11-20",
+      "task": "Final report of published URLs, crawl/access checks, available Google performance and aggregate leads; do not promise rankings."
+    }
+  ],
+  "setup": {
+    "date": "2026-10-21",
+    "status": "completed",
+    "checks": [
+      "Canonical and Open Graph metadata on 20 public pages",
+      "Unique title/description and local-link validation passed",
+      "Source attribution allowlist includes all 12 scheduled guide URLs",
+      "Daily publication automation created; first article due 2026-10-23",
+      "SEO validation added to sitemap workflow"
+    ],
+    "automation_id": "ng-12-b-i-seo-an-ng-22-10-n-20-11"
+  }
+}
