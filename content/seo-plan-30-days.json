@@ -12,10 +12,14 @@
       "slug": "tour-le-giang-shangrila",
       "title": "Tour Lệ Giang – Shangrila từ TP.HCM: chọn hành trình nào?",
       "intent": "le giang",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-le-giang-shangrila.html",
+      "published_at": "2026-10-23T04:56:33.069229+00:00",
+      "sources": [
+        "https://whc.unesco.org/en/list/811/",
+        "https://english.www.gov.cn/news/202311/27/content_WS656454a8c6d0868f4e8e1acb.html",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ]
     },
     {
       "id": 2,
@@ -142,7 +146,11 @@
   "milestones": [
     {
       "date": "2026-10-22",
-      "task": "Audit metadata, internal links, mobile CTA, form path and schedule/PDF accuracy; fix verified issues."
+      "task": "Audit metadata, internal links, mobile CTA, form path and schedule/PDF accuracy; fix verified issues.",
+      "status": "in_progress",
+      "evidence": [
+        "23/10: metadata and local links audited using check_seo.py; full mobile and schedule/PDF audit not yet completed."
+      ]
     },
     {
       "date": "2026-10-29",
