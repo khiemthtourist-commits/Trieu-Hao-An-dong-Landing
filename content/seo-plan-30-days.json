@@ -12,13 +12,21 @@
       "slug": "tour-le-giang-shangrila",
       "title": "Tour Lệ Giang – Shangrila từ TP.HCM: chọn hành trình nào?",
       "intent": "le giang",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/tour-le-giang-shangrila.html",
       "published_at": "2026-10-23T04:56:33.069229+00:00",
       "sources": [
         "https://whc.unesco.org/en/list/811/",
         "https://english.www.gov.cn/news/202311/27/content_WS656454a8c6d0868f4e8e1acb.html",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "verified_at": "2026-10-23T04:57:59.653377+00:00",
+      "verification": [
+        "HTTP 200 on public URL",
+        "Canonical matches article URL",
+        "Article listed in public sitemap",
+        "CTA carries article source to lead form",
+        "Offline SEO checks passed for 21 public pages"
       ]
     },
     {
