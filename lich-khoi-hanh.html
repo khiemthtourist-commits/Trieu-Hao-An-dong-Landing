@@ -312,9 +312,6 @@
 
   var PDF_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>';
   function pdfLinkHtml(r){
-    if (r.slug){
-      return '<a class="sched-pdf" href="assets/tour-pdfs/'+r.slug+'.pdf" download>'+PDF_ICON+'Tải chương trình (PDF)</a>';
-    }
     if (r.pdfExternal){
       return '<a class="sched-pdf" href="'+esc(r.pdfExternal)+'" target="_blank" rel="noopener">'+PDF_ICON+'Tải chương trình (PDF)</a>';
     }

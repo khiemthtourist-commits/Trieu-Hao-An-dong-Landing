@@ -18,6 +18,7 @@ import os
 import re
 import sys
 import unicodedata
+from urllib.parse import urljoin, urlsplit
 
 import requests
 
@@ -73,7 +74,7 @@ def match_slug(ten, malich):
         return "nga-moscow-stpetersburg"
     for slug, key in KNOWN_TOURS.items():
         words = key.split()
-        if sum(1 for w in words if w in n) >= max(2, len(words) - 1):
+        if set(words).issubset(set(n.split())):
             return slug
     return None
 
@@ -153,7 +154,7 @@ def extract_row(raw):
 def fetch_all_rows(session, date_from, date_to, page_size=100):
     ngay_param = "%s - %s" % (date_from, date_to)
     page_url = PAGE_URL + "?Ngay=" + requests.utils.quote(ngay_param) + "&NoiXuatPhatId=1&IsNgay=true"
-    session.get(page_url, headers={"User-Agent": UA})
+    session.get(page_url, headers={"User-Agent": UA}, timeout=30)
 
     all_rows = []
     start = 0
@@ -195,15 +196,23 @@ def fetch_all_rows(session, date_from, date_to, page_size=100):
     return all_rows
 
 
+def source_pdf_url(path):
+    """Keep only the PDF attached to this exact source row, never a route fallback."""
+    if not path:
+        return None
+    url = urljoin(BASE + "/", path)
+    parsed = urlsplit(url)
+    if parsed.scheme != "https" or parsed.netloc.lower() != urlsplit(BASE).netloc.lower():
+        return None
+    return url if parsed.path.lower().endswith(".pdf") else None
+
+
 def build_schedule_data(raw_rows):
     out = []
-    malich_pdf = {}
     for raw in raw_rows:
         r = extract_row(raw)
         if not r["ten"] or not r["maLich"]:
             continue
-        if r["pdf"]:
-            malich_pdf[r["maLich"]] = r["pdf"]
 
         bucket = REGION_BUCKET.get(r["vung"], "khac")
         slug = match_slug(r["ten"], r["maLich"])
@@ -217,14 +226,8 @@ def build_schedule_data(raw_rows):
             "giaGoc": r["giaGoc"], "giaSale": r["giaSale"] or "Liên hệ",
             "coGiaTot": bool(r["giaGoc"] and r["giaGoc"] != r["giaSale"]),
             "slug": slug,
+            "pdfExternal": source_pdf_url(r["pdf"]),
         })
-
-    for row in out:
-        if row["slug"]:
-            continue
-        pdf = malich_pdf.get(row["maLich"])
-        if pdf:
-            row["pdfExternal"] = BASE + pdf
 
     out.sort(key=lambda x: x["ngayDiSort"])
     return out

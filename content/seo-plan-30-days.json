@@ -157,8 +157,14 @@
       "task": "Audit metadata, internal links, mobile CTA, form path and schedule/PDF accuracy; fix verified issues.",
       "status": "in_progress",
       "evidence": [
-        "23/10: metadata and local links audited using check_seo.py; full mobile and schedule/PDF audit not yet completed."
-      ]
+        "23/10: metadata and local links audited using check_seo.py; full mobile and schedule/PDF audit not yet completed.",
+        "24/10: identified and fixed wrong Hainan detail links caused by substring matching; now whole-word matching.",
+        "24/10: schedule PDFs now always come from the exact source row, including rows linked to a local tour detail page; removed route-level/local PDF fallback.",
+        "24/10: refreshed 810 public departure rows, 772 have their source PDF and 38 do not; no substitute PDF is shown for those 38.",
+        "24/10: three regression tests passed (same route/code with different airline PDFs, missing PDF, wrong Hainan matches and untrusted PDF host); added tests to recurring sync workflow.",
+        "24/10: offline metadata/internal-link checks passed on all 21 public pages; full browser/mobile audit remains pending."
+      ],
+      "last_checked_at": "2026-10-24T03:14:17.498015+00:00"
     },
     {
       "date": "2026-10-29",
