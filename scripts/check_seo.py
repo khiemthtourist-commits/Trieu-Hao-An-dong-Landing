@@ -1,7 +1,7 @@
 """Offline pre-publication checks for public pages and the finite content plan."""
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit, unquote
+from urllib.parse import urljoin, urlsplit, unquote, parse_qs
 import json
 from build_sitemap import BASE, ROOT, Metadata
 
@@ -37,6 +37,10 @@ def check(root=ROOT):
         assert page.canonical==expected, f'{rel}: incorrect canonical'
         for link in page.links:
             u=urlsplit(link)
+            if path.parent == root and path.name != 'index.html' and u.path == 'index.html':
+                source = parse_qs(u.query).get('from')
+                if source:
+                    assert source == ['/' + path.name], f'{rel}: incorrect lead-source attribution {link}'
             if u.scheme or u.netloc or not u.path: continue
             target=path.parent/unquote(u.path)
             assert target.exists(), f'{rel}: broken local link {link}'

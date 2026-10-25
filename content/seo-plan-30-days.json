@@ -162,9 +162,11 @@
         "24/10: schedule PDFs now always come from the exact source row, including rows linked to a local tour detail page; removed route-level/local PDF fallback.",
         "24/10: refreshed 810 public departure rows, 772 have their source PDF and 38 do not; no substitute PDF is shown for those 38.",
         "24/10: three regression tests passed (same route/code with different airline PDFs, missing PDF, wrong Hainan matches and untrusted PDF host); added tests to recurring sync workflow.",
-        "24/10: offline metadata/internal-link checks passed on all 21 public pages; full browser/mobile audit remains pending."
+        "24/10: offline metadata/internal-link checks passed on all 21 public pages; full browser/mobile audit remains pending.",
+        "25/10: browser checked Lijiang article and CTA-to-form at 390px viewport; document width 390px without overflow; form selected Tour Trung Quốc – Đài Loan; no form submitted.",
+        "25/10: found mobile sticky CTA on Lijiang page incorrectly attributed to Cửu Trại Câu; corrected and added pre-publication check for mismatched from= across root guide CTAs."
       ],
-      "last_checked_at": "2026-10-24T03:14:17.498015+00:00"
+      "last_checked_at": "2026-10-25T03:16:28.126779+00:00"
     },
     {
       "date": "2026-10-29",
