@@ -35,10 +35,15 @@
       "slug": "tour-bac-kinh-thuong-hai",
       "title": "Tour Bắc Kinh – Thượng Hải: phù hợp với ai?",
       "intent": "bac kinh",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-bac-kinh-thuong-hai.html",
+      "published_at": "2026-10-26T04:15:45.163131+00:00",
+      "sources": [
+        "https://whc.unesco.org/en/list/439/",
+        "https://whc.unesco.org/en/list/438/",
+        "https://whc.unesco.org/en/list/1334/",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ]
     },
     {
       "id": 3,
