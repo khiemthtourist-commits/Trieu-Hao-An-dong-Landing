@@ -49,3 +49,10 @@ Nguồn lịch và trạng thái: `content/seo-plan-30-days.json`. Bốn bài Tr
 - Chuyển dữ kiện đã kiểm tra thành tư vấn: ví dụ “Hành trình Bắc Kinh – Thượng Hải có thể kết hợp Tô Châu và Hàng Châu, phù hợp cho chuyến đi 7–8 ngày.” Chỉ viết thông tin có căn cứ, không biến lựa chọn tham khảo thành cam kết dịch vụ.
 - Hướng khách xem lịch trình và nhận báo giá bằng cách diễn đạt thân thiện; không lặp lại cảnh báo máy móc ở từng đoạn. Giữ các lưu ý thực sự cần cho quyết định (giá bao gồm, điểm tự chọn, visa, sức khỏe) ngắn gọn, đúng ngữ cảnh.
 - Trước khi xuất bản, đọc lại toàn bài với vai trò khách hàng; loại câu mang giọng kỹ thuật, tự giải thích cách viết bài hoặc hướng dẫn xử lý dữ liệu nội bộ.
+
+## Biên tập giàu cảm xúc và CTA (26/10/2026)
+
+- Mở bài bằng nét riêng của điểm đến và mong muốn của người đi, dùng hình ảnh cụ thể có căn cứ; tránh văn hoa sáo rỗng, cảm xúc giả hoặc kể như đã trải nghiệm.
+- Mỗi bài có góc tiếp cận riêng, ưu tiên trải nghiệm và lợi ích trước phần chuẩn bị. Không nhân bản đoạn cảnh báo dài, không liên tục mở câu bằng “Không nên”, “Đừng”, “Cần kiểm tra”. Gộp lưu ý cần thiết thành hướng dẫn ngắn đúng ngữ cảnh.
+- CTA gắn với tuyến đang đọc: nhận lịch, báo giá hoặc chọn phương án theo ngày đi/số khách/sở thích. Nêu rõ giá trị khách nhận được, giữ nguồn bài trong liên kết form. Không hứa ưu đãi, suất giới hạn hoặc tốc độ phản hồi chưa được xác nhận.
+- SEO phục vụ ý định tìm kiếm: tiêu đề rõ, nội dung hữu ích, liên kết nội bộ phù hợp, metadata đồng nhất. Không nhồi từ khóa hoặc hứa lên trang một. Chủ đề theo mùa chỉ là gợi ý kế hoạch; chỉ gọi là xu hướng khi có dữ liệu kiểm chứng.
