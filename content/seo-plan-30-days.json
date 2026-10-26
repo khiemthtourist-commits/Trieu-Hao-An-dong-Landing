@@ -35,7 +35,7 @@
       "slug": "tour-bac-kinh-thuong-hai",
       "title": "Tour Bắc Kinh – Thượng Hải: phù hợp với ai?",
       "intent": "bac kinh",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/tour-bac-kinh-thuong-hai.html",
       "published_at": "2026-10-26T04:15:45.163131+00:00",
       "sources": [
@@ -43,6 +43,14 @@
         "https://whc.unesco.org/en/list/438/",
         "https://whc.unesco.org/en/list/1334/",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "verified_at": "2026-10-26T04:17:12.323646+00:00",
+      "verification": [
+        "Public HTTP 200, correct H1/canonical and Article date 2026-10-26",
+        "All consultation links carry the Beijing–Shanghai source URL",
+        "Public sitemap and guide index include article",
+        "Mobile browser at 390px: CTA wraps within viewport; no horizontal page overflow",
+        "Offline SEO checks passed on 22 public pages; 3 schedule PDF regression tests passed"
       ]
     },
     {
@@ -169,7 +177,8 @@
         "24/10: three regression tests passed (same route/code with different airline PDFs, missing PDF, wrong Hainan matches and untrusted PDF host); added tests to recurring sync workflow.",
         "24/10: offline metadata/internal-link checks passed on all 21 public pages; full browser/mobile audit remains pending.",
         "25/10: browser checked Lijiang article and CTA-to-form at 390px viewport; document width 390px without overflow; form selected Tour Trung Quốc – Đài Loan; no form submitted.",
-        "25/10: found mobile sticky CTA on Lijiang page incorrectly attributed to Cửu Trại Câu; corrected and added pre-publication check for mismatched from= across root guide CTAs."
+        "25/10: found mobile sticky CTA on Lijiang page incorrectly attributed to Cửu Trại Câu; corrected and added pre-publication check for mismatched from= across root guide CTAs.",
+        "26/10: Beijing–Shanghai article browser checked at 390px; adjusted shared editorial hero CTA wrapping to keep long button text inside viewport."
       ],
       "last_checked_at": "2026-10-25T03:16:28.126779+00:00"
     },
