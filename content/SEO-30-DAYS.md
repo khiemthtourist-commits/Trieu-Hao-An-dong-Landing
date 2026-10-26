@@ -40,3 +40,12 @@ Nguồn lịch và trạng thái: `content/seo-plan-30-days.json`. Bốn bài Tr
 - Dùng kết nối Windsor.ai đã có để đọc Search Console qua skill; không bịa số liệu khi data trống hay hết quota. Theo dõi hiện có dùng báo cáo Google Sheet riêng tư; không đưa file/ID Sheet hoặc thông tin khách hàng vào repo/website công khai.
 - Không suy ra nguồn Google hoặc tỷ lệ chuyển đổi từ bài nguồn, lượt nhấp hay số điện thoại. Phân biệt lượt lưu form, số không trùng và khách được xác minh.
 - Đây là lịch thực thi trong ứng dụng có quyền truy cập repo trên máy; không phải dịch vụ AI xuất bản trên GitHub khi máy tắt. GitHub Actions vẫn tự cập nhật sitemap và kiểm tra website từ xa. Không hứa đúng giờ tuyệt đối hoặc thứ hạng trong 30 ngày.
+
+## Giọng văn bài viết dành cho khách hàng (cập nhật theo yêu cầu 26/10)
+
+- Bài công khai phải đọc như lời tư vấn du lịch chuyên nghiệp: điểm đến, trải nghiệm, lợi ích, đối tượng phù hợp và lời mời tư vấn tự nhiên.
+- Không kể quá trình xử lý hay kiểm tra dữ liệu: tránh “trong dữ liệu lịch khởi hành”, “đối chiếu ngày…”, “hệ thống có nhóm tuyến”, “thời lượng ghi”, mã lịch, PDF/file và ngôn ngữ báo cáo vận hành trong phần giới thiệu.
+- Việc xác minh nguồn, đếm lịch, kiểm tra hãng bay và ngày kiểm tra chỉ ghi trong ledger công việc; không đưa nguyên ghi chú nghiên cứu lên bài. Ngày đăng/cập nhật và nguồn tham khảo chính thống vẫn dùng khi phù hợp.
+- Chuyển dữ kiện đã kiểm tra thành tư vấn: ví dụ “Hành trình Bắc Kinh – Thượng Hải có thể kết hợp Tô Châu và Hàng Châu, phù hợp cho chuyến đi 7–8 ngày.” Chỉ viết thông tin có căn cứ, không biến lựa chọn tham khảo thành cam kết dịch vụ.
+- Hướng khách xem lịch trình và nhận báo giá bằng cách diễn đạt thân thiện; không lặp lại cảnh báo máy móc ở từng đoạn. Giữ các lưu ý thực sự cần cho quyết định (giá bao gồm, điểm tự chọn, visa, sức khỏe) ngắn gọn, đúng ngữ cảnh.
+- Trước khi xuất bản, đọc lại toàn bài với vai trò khách hàng; loại câu mang giọng kỹ thuật, tự giải thích cách viết bài hoặc hướng dẫn xử lý dữ liệu nội bộ.

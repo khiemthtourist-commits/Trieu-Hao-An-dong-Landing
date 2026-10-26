@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit, unquote, parse_qs
 import json
+import re
 from build_sitemap import BASE, ROOT, Metadata
 
 class Page(Metadata):
@@ -29,6 +30,10 @@ def check(root=ROOT):
     for path in paths:
         page=Page(); page.feed(path.read_text())
         if page.noindex: continue
+        if 'class="article-copy"' in path.read_text():
+            public_text = re.sub(r'<[^>]+>', ' ', path.read_text()).lower()
+            for phrase in ('trong dữ liệu lịch khởi hành', 'lịch tour được đối chiếu ngày', 'hệ thống có nhóm tuyến', 'thời lượng ghi'):
+                assert phrase not in public_text, f'{path.name}: internal-process wording in public article'
         rel=path.relative_to(root).as_posix()
         assert page.h1==1, f'{rel}: expected one H1'
         assert page.titles==1, f'{rel}: expected one title'
