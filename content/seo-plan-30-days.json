@@ -59,10 +59,15 @@
       "slug": "tour-trung-quoc-shopping-no-shopping",
       "title": "Tour Trung Quốc shopping và no-shopping khác nhau thế nào?",
       "intent": "shopping",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-trung-quoc-shopping-no-shopping.html",
+      "published_at": "2026-10-28T08:35:35.737883+00:00",
+      "sources": [
+        "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_55b4bbc9a30547a9912e7ed61ffa7e20.html",
+        "https://english.shanghai.gov.cn/en-LocalRules/20240911/4579c4c0745e411d939fbd255295b580.html",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "28/10: reviewed current synced public schedule; no mainland China route explicitly labelled no-shopping in titles. Article explains selection principles and does not advertise a confirmed mainland no-shopping departure or invent prices. Official source page via web fetch unavailable; schedule availability not inferred from label absence."
     },
     {
       "id": 4,
