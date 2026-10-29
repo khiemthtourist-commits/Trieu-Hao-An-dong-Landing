@@ -197,7 +197,16 @@
     },
     {
       "date": "2026-10-29",
-      "task": "Upgrade existing China guides; evaluate indexing and internal links without fabricating traffic."
+      "task": "Upgrade existing China guides; evaluate indexing and internal links without fabricating traffic.",
+      "status": "in_progress",
+      "last_checked_at": "2026-10-29T02:58:53.596980+00:00",
+      "evidence": [
+        "29/10: refreshed six guide-index summaries to match the warm customer-facing editorial updates, replacing stale checklist/warning copy.",
+        "29/10: checked incoming guide/hub links and added a contextual Cuu Trai Cau link to the published shopping/no-shopping guide.",
+        "29/10: Windsor Search Console account/fields rediscovered; sitemap row reports zero errors/warnings, last downloaded 26/10 and 22 submitted URLs. Current generated sitemap contains 23 URLs; this lag does not prove an indexing failure.",
+        "29/10: page-level Search Console period 29/09–26/10 contains a China hub impression. Other guide URLs absent from returned page rows: no per-URL index verdict inferred; data too sparse for CTR-based title changes.",
+        "29/10: per-URL indexing inspection not available through discovered connector fields; indexing assessment remains partial, not marked fully complete."
+      ]
     },
     {
       "date": "2026-11-05",
