@@ -83,10 +83,15 @@
       "slug": "tour-cap-nhi-tan-lang-tuyet-huong",
       "title": "Tour Cáp Nhĩ Tân – Làng Tuyết Hương: chuẩn bị gì?",
       "intent": "cap nhi tan",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-cap-nhi-tan-lang-tuyet-huong.html",
+      "published_at": "2026-10-30T03:03:59.868735+00:00",
+      "sources": [
+        "https://english.www.gov.cn/news/202501/07/content_WS677d1235c6d0868f4e8ee954.html",
+        "https://english.www.gov.cn/english.www.gov.cn/news/202412/01/content_WS674bd867c6d0868f4e8ed934.html",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "30/10: refreshed remote schedule has Cáp Nhĩ Tân / Tuyết Hương 7N6D and Á Bố Lực variants 6N5D/7N6D, including December departures. No unverified season opening dates, guaranteed snowfall, fixed prices or automatic skiing inclusions advertised. Official destination sources are prior-season background, not 2026/27 operating schedules."
     },
     {
       "id": 5,
