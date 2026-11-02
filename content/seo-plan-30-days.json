@@ -107,10 +107,16 @@
       "slug": "tour-trung-quoc-thang-12",
       "title": "Đi Trung Quốc tháng 12: chọn tuyến theo sở thích",
       "intent": "thang 12",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-trung-quoc-thang-12.html",
+      "published_at": "2026-11-02T04:16:29.453586+00:00",
+      "sources": [
+        "https://whc.unesco.org/en/list/811/",
+        "https://whc.unesco.org/en/list/1334/",
+        "https://english.www.gov.cn/news/202501/07/content_WS677d1235c6d0868f4e8ee954.html",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "02/11 current Vietnam date supplied by environment; slot due. Remote synced December schedules checked for Harbin, Lijiang/Shangrila, Shanghai/Hangzhou and Beijing. No guaranteed snow, unverified opening dates or fixed prices. Official sources support destination background only, not current operating schedules."
     },
     {
       "id": 6,
