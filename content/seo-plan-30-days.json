@@ -130,12 +130,18 @@
       "id": 6,
       "scheduled_date": "2026-11-04",
       "slug": "tour-thuong-hai-disneyland",
-      "title": "Tour Thượng Hải có Disneyland: kiểm tra gì trước khi đặt?",
+      "title": "Tour Thượng Hải có Disneyland: chọn hành trình cho cả nhà",
       "intent": "disneyland",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-thuong-hai-disneyland.html",
+      "published_at": "2026-11-05T05:10:09.066036+00:00",
+      "sources": [
+        "https://thewaltdisneycompany.com/news/zootopia-opening-shanghai-disney-resort/",
+        "https://www.shanghaidisneyresort.com/en/experience?group=attraction",
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20240926/965f448498b7417c965f1e256e2d22aa.html",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "05/11 catch-up for 04/11 slot; actual date retained. Public schedule includes Shanghai/Wuzhen/Hangzhou/Disneyland 6N5D December departures. Source title does not prove ticket inclusion: article distinguishes included package from optional free-day visit and invents no price. Official Disney attraction background checked; dated 2024 identification announcement used as background, no unverified current age thresholds stated."
     },
     {
       "id": 7,
