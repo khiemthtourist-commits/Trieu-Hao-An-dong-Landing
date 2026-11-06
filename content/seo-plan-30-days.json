@@ -157,7 +157,7 @@
       "slug": "le-giang-shangrila-hay-cuu-trai-cau",
       "title": "Lệ Giang – Shangrila hay Cửu Trại Câu: nên chọn tuyến nào?",
       "intent": "so sanh",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/le-giang-shangrila-hay-cuu-trai-cau.html",
       "published_at": "2026-11-06T04:21:15.174334+00:00",
       "sources": [
@@ -165,7 +165,15 @@
         "https://whc.unesco.org/en/list/637/",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
       ],
-      "research_note": "06/11: remote synced schedule has Lijiang/Shangrila 5-day, Dali combination 6-day and Chengdu/Jiuzhaigou 6-day variants. Comparison concerns interests and itinerary rhythm, no cheapest/easier/guaranteed seasonal scenery claims. UNESCO background reviewed."
+      "research_note": "06/11: remote synced schedule has Lijiang/Shangrila 5-day, Dali combination 6-day and Chengdu/Jiuzhaigou 6-day variants. Comparison concerns interests and itinerary rhythm, no cheapest/easier/guaranteed seasonal scenery claims. UNESCO background reviewed.",
+      "verified_at": "2026-11-06T04:21:51.955492+00:00",
+      "verification": [
+        "Public HTTP 200, canonical, single H1 and publication date 2026-11-06 verified",
+        "Live sitemap, guide index and incoming links from hub/Lijiang/Jiuzhaigou guides confirmed",
+        "All consultation CTAs preserve comparison article source; deployed lead allowlist includes URL",
+        "Offline SEO checks passed on 27 public pages; lead JS syntax passed",
+        "No test form sent; no mobile browser audit claimed"
+      ]
     },
     {
       "id": 8,
