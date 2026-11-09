@@ -2,8 +2,8 @@ name: Đồng bộ lịch khởi hành
 
 on:
   schedule:
-    # 03:00 và 15:00 giờ Việt Nam (UTC+7) = 20:00 và 08:00 UTC
-    - cron: "0 20,8 * * *"
+    # 1 lần mỗi 24 giờ, lúc 03:00 giờ Việt Nam (UTC+7) = 20:00 UTC
+    - cron: "0 20 * * *"
   workflow_dispatch: {}
 
 permissions:
