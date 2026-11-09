@@ -181,10 +181,15 @@
       "slug": "tour-trung-quoc-gia-dinh-tre-nho",
       "title": "Tour Trung Quốc cho gia đình có trẻ nhỏ: cách chọn",
       "intent": "gia dinh",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-trung-quoc-gia-dinh-tre-nho.html",
+      "published_at": "2026-11-09T03:16:35.408561+00:00",
+      "sources": [
+        "https://www.shanghaidisneyresort.com/experience/attraction/seven-dwarfs-mine-train/",
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20241121/16891d39bb1e4c0aa66e65254027adc3.html",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "09/11: remote synced schedule confirms Shanghai/Disneyland and Lijiang variants. General family planning advice avoids universal age suitability, medical claims or invented child prices. Official attraction page checked: Seven Dwarfs Mine Train 97cm minimum; other rules must be checked individually."
     },
     {
       "id": 9,
