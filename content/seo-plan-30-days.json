@@ -205,7 +205,7 @@
       "slug": "gia-tour-trung-quoc-bao-gom-gi",
       "title": "Giá tour Trung Quốc gồm những gì, có thể phát sinh khoản nào?",
       "intent": "chi phi",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/gia-tour-trung-quoc-bao-gom-gi.html",
       "published_at": "2026-11-13T02:12:39.919391+00:00",
       "sources": [
@@ -213,7 +213,15 @@
         "https://trieuhaotravel.vn/du-lich-trung-quoc-quy-duong-tay-giang-tieu-that-khong-trung-khanh-2026-gy?MaLichTour=TQ131106QC",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
       ],
-      "research_note": "13/11 catch-up for 11/11 slot, only one new article today. Current remote schedule reviewed; parent company public program sections support varied inclusions and exclusions. No fixed prices, generic visa fees, child percentages or guaranteed inclusions advertised."
+      "research_note": "13/11 catch-up for 11/11 slot, only one new article today. Current remote schedule reviewed; parent company public program sections support varied inclusions and exclusions. No fixed prices, generic visa fees, child percentages or guaranteed inclusions advertised.",
+      "verified_at": "2026-11-13T02:13:13.430772+00:00",
+      "verification": [
+        "Public HTTP 200, single H1, canonical and actual publication date 2026-11-13 confirmed",
+        "Public sitemap, guide index and hub link verified",
+        "Consultation links preserve cost guide source; deployed lead allowlist contains URL",
+        "Offline SEO checks passed on 29 public pages; lead JS syntax passed",
+        "No test form sent; no mobile browser audit claimed"
+      ]
     },
     {
       "id": 10,
