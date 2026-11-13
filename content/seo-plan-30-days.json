@@ -205,10 +205,15 @@
       "slug": "gia-tour-trung-quoc-bao-gom-gi",
       "title": "Giá tour Trung Quốc gồm những gì, có thể phát sinh khoản nào?",
       "intent": "chi phi",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/gia-tour-trung-quoc-bao-gom-gi.html",
+      "published_at": "2026-11-13T02:12:39.919391+00:00",
+      "sources": [
+        "https://trieuhaotravel.vn/du-lich-trung-quoc-nam-kinh-hang-chau-o-tran-thuong-hai?MaLichTour=TQ161126LMNK",
+        "https://trieuhaotravel.vn/du-lich-trung-quoc-quy-duong-tay-giang-tieu-that-khong-trung-khanh-2026-gy?MaLichTour=TQ131106QC",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "13/11 catch-up for 11/11 slot, only one new article today. Current remote schedule reviewed; parent company public program sections support varied inclusions and exclusions. No fixed prices, generic visa fees, child percentages or guaranteed inclusions advertised."
     },
     {
       "id": 10,
