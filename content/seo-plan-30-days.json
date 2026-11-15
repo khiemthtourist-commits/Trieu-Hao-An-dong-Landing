@@ -229,10 +229,15 @@
       "slug": "tour-trung-quoc-tet-2027",
       "title": "Tour Trung Quốc Tết 2027: cách chọn lịch và dịch vụ",
       "intent": "tet",
-      "status": "pending",
-      "published_url": null,
-      "published_at": null,
-      "sources": []
+      "status": "awaiting_verification",
+      "published_url": "https://www.trieuhaoandong.com/tour-trung-quoc-tet-2027.html",
+      "published_at": "2026-11-15T11:37:09.505776+00:00",
+      "sources": [
+        "https://whc.unesco.org/en/list/811/",
+        "https://whc.unesco.org/en/list/1334/",
+        "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
+      ],
+      "research_note": "15/11 catch-up: current February 2027 Beijing/Shanghai and Lijiang departures reviewed. No official leave dates, prices, festival events, guaranteed snow or blossoms asserted. UNESCO background checked."
     },
     {
       "id": 11,
