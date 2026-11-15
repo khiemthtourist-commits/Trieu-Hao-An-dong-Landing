@@ -229,7 +229,7 @@
       "slug": "tour-trung-quoc-tet-2027",
       "title": "Tour Trung Quốc Tết 2027: cách chọn lịch và dịch vụ",
       "intent": "tet",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/tour-trung-quoc-tet-2027.html",
       "published_at": "2026-11-15T11:37:09.505776+00:00",
       "sources": [
@@ -237,7 +237,15 @@
         "https://whc.unesco.org/en/list/1334/",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
       ],
-      "research_note": "15/11 catch-up: current February 2027 Beijing/Shanghai and Lijiang departures reviewed. No official leave dates, prices, festival events, guaranteed snow or blossoms asserted. UNESCO background checked."
+      "research_note": "15/11 catch-up: current February 2027 Beijing/Shanghai and Lijiang departures reviewed. No official leave dates, prices, festival events, guaranteed snow or blossoms asserted. UNESCO background checked.",
+      "verified_at": "2026-11-15T11:53:47.897456+00:00",
+      "verification": [
+        "Public HTTP 200, canonical, single H1 and actual date 2026-11-15 verified",
+        "Sitemap, guide index, hub and deployed lead allowlist contain article URL",
+        "All consultation links preserve Tet article source",
+        "Offline SEO validation passed for 30 public pages; lead JS syntax passed",
+        "No form sent or mobile browser audit claimed"
+      ]
     },
     {
       "id": 11,
