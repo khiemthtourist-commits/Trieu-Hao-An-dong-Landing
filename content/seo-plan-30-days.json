@@ -253,14 +253,22 @@
       "slug": "ho-so-di-tour-trung-quoc",
       "title": "Hồ sơ đi tour Trung Quốc: cần chuẩn bị gì?",
       "intent": "visa",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/ho-so-di-tour-trung-quoc.html",
       "published_at": "2026-11-16T06:41:49.274680+00:00",
       "sources": [
         "https://www.visaforchina.cn/SGN4_EN/qianzhengyewu/jichuzhishi/banliliucheng/551671293469134861.html",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
       ],
-      "research_note": "16/11: current official Ho Chi Minh City tourism L page reviewed. Passport 6 months/two blank visa pages scoped expressly to individual L; no blanket group visa rule, fees, processing deadline, fingerprint exemptions or approval promises. Article directs itinerary-specific checklist."
+      "research_note": "16/11: current official Ho Chi Minh City tourism L page reviewed. Passport 6 months/two blank visa pages scoped expressly to individual L; no blanket group visa rule, fees, processing deadline, fingerprint exemptions or approval promises. Article directs itinerary-specific checklist.",
+      "verified_at": "2026-11-16T06:42:46.850724+00:00",
+      "verification": [
+        "Public HTTP 200, canonical, single H1 and actual date 2026-11-16 verified",
+        "Live sitemap, guide index, hub and lead source allowlist include URL",
+        "All consultation CTAs preserve document guide source",
+        "Offline SEO checks passed on 31 public pages; lead JS syntax passed",
+        "No form sent or mobile browser audit claimed"
+      ]
     },
     {
       "id": 12,
