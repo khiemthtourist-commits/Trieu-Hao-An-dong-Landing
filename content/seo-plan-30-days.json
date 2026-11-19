@@ -276,7 +276,7 @@
       "slug": "tour-trung-quoc-nguoi-lon-tuoi",
       "title": "Tour Trung Quốc cho người lớn tuổi: chọn hành trình vừa sức",
       "intent": "nguoi lon tuoi",
-      "status": "awaiting_verification",
+      "status": "published",
       "published_url": "https://www.trieuhaoandong.com/tour-trung-quoc-nguoi-lon-tuoi.html",
       "published_at": "2026-11-19T02:10:46.539782+00:00",
       "sources": [
@@ -284,7 +284,15 @@
         "https://whc.unesco.org/en/list/811/",
         "https://trieuhaotravel.vn/DieuHanhTour/DatCho"
       ],
-      "research_note": "19/11 catch-up: itinerary selection only, no medical clearance, age suitability, insurance coverage or accessibility guarantees. UNESCO background checked."
+      "research_note": "19/11 catch-up: itinerary selection only, no medical clearance, age suitability, insurance coverage or accessibility guarantees. UNESCO background checked.",
+      "verified_at": "2026-11-19T02:11:10.687487+00:00",
+      "verification": [
+        "Public HTTP 200, canonical, single H1 and date 2026-11-19 confirmed",
+        "Live sitemap, guide index, hub and lead source allowlist include URL",
+        "All consultation CTAs preserve article source",
+        "Offline SEO checks passed on 32 public pages; lead JS syntax passed",
+        "No test form or mobile audit claimed"
+      ]
     }
   ],
   "milestones": [
