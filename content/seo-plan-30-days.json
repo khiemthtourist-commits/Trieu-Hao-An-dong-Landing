@@ -339,11 +339,25 @@
     },
     {
       "date": "2026-11-12",
-      "task": "Review mobile layout, information accuracy and form drop-off evidence if available; refresh relevant guides."
+      "task": "Review mobile layout, information accuracy and form drop-off evidence if available; refresh relevant guides.",
+      "status": "in_progress",
+      "last_checked_at": "2026-11-20T04:29:04.953749+00:00",
+      "evidence": [
+        "20/11: live form wiring and article-source attribution checked without submission; funnel/session drop-off data unavailable",
+        "Full mobile audit not completed; no completion claimed"
+      ]
     },
     {
       "date": "2026-11-20",
-      "task": "Final report of published URLs, crawl/access checks, available Google performance and aggregate leads; do not promise rankings."
+      "task": "Final report of published URLs, crawl/access checks, available Google performance and aggregate leads; do not promise rankings.",
+      "status": "completed",
+      "last_checked_at": "2026-11-20T04:29:04.953499+00:00",
+      "evidence": [
+        "20/11: confirmed 12/12 published entries; final report saved to content/SEO-CAMPAIGN-RESULTS.md",
+        "20/11: 32-page offline SEO and live access checks passed; three PDF regression tests passed",
+        "20/11: fresh Search Console and private aggregate form report reviewed; no personal information committed",
+        "Full mobile and per-URL indexing audit explicitly incomplete, not marked done"
+      ]
     }
   ],
   "setup": {
@@ -361,5 +375,17 @@
   "editorial_preferences": {
     "updated": "2026-10-26",
     "voice": "Warm, evocative, destination-specific Vietnamese travel editorial; concrete verified experiences before concise practical notes. No internal-process language, repetitive warnings, invented first-hand experience or unverified trends. Route-specific form CTAs state the value of schedule and quotation advice; preserve SEO and attribution."
+  },
+  "final_report": {
+    "date": "2026-11-20",
+    "path": "content/SEO-CAMPAIGN-RESULTS.md",
+    "published_articles": 12,
+    "public_pages_checked": 32,
+    "automation_action": "Pause after 2026-11-20; no new campaign",
+    "limitations": [
+      "full mobile audit incomplete",
+      "per-URL Google indexing not verified",
+      "no attributed session-to-lead conversion measurement"
+    ]
   }
 }
